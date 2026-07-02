@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RoboBricks — The Cloud Platform for Every Robot</title>
+  <meta name="description" content="RoboBricks is the cloud platform where robot capabilities become reusable software. GitHub + Docker + AWS for robots — one skill, many robots." />
+  <meta name="theme-color" content="#05070f" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="RoboBricks — The Cloud Platform for Every Robot" />
+  <meta property="og:description" content="Robot capabilities as reusable software. Publish a skill once, run it on any robot." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0f1c'/%3E%3Cpath d='M8 12l8-4 8 4-8 4-8-4z' fill='%2338bdf8'/%3E%3Cpath d='M8 12v8l8 4v-8l-8-4z' fill='%230ea5e9'/%3E%3Cpath d='M24 12v8l-8 4v-8l8-4z' fill='%23fb923c'/%3E%3C/svg%3E" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ===== Ambient background ===== -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+
+  <!-- ===== Nav ===== -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="brand" aria-label="RoboBricks home">
+        <svg class="brand__mark" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
+          <path d="M8 12l8-4 8 4-8 4-8-4z" fill="#38bdf8"/>
+          <path d="M8 12v8l8 4v-8l-8-4z" fill="#0ea5e9"/>
+          <path d="M24 12v8l-8 4v-8l8-4z" fill="#fb923c"/>
+        </svg>
+        <span class="brand__name">Robo<span>Bricks</span></span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#platform">Platform</a>
+        <a href="#marketplace">Marketplace</a>
+        <a href="#developers">Developers</a>
+        <a href="#enterprise">Enterprise</a>
+      </nav>
+
+      <div class="nav__cta">
+        <a href="#developers" class="btn btn--ghost">Read the docs</a>
+        <a href="#contact" class="btn btn--primary">Request access</a>
+      </div>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <span class="eyebrow"><span class="eyebrow__dot"></span> The robotics platform layer</span>
+          <h1 class="hero__title">
+            The <span class="grad">App Store</span> for the world's robots.
+          </h1>
+          <p class="hero__lede">
+            Every robotics company rewrites the same code for navigation, grasping, vision and safety.
+            RoboBricks turns robot capabilities into reusable software — published once, deployed to any
+            robot, improving with every deployment.
+          </p>
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--primary btn--lg">Request early access</a>
+            <a href="#platform" class="btn btn--ghost btn--lg">See how it works &rarr;</a>
+          </div>
+          <div class="hero__proof">
+            <span>One skill, many robots</span>
+            <span class="dot">•</span>
+            <span>Hardware independent</span>
+            <span class="dot">•</span>
+            <span>Cloud-native intelligence</span>
+          </div>
+        </div>
+
+        <!-- Product mock -->
+        <div class="hero__panel" aria-hidden="true">
+          <div class="panel">
+            <div class="panel__bar">
+              <span class="panel__dots"><i></i><i></i><i></i></span>
+              <span class="panel__title">robobricks — skill store</span>
+            </div>
+            <div class="panel__body">
+              <div class="skill">
+                <div class="skill__icon">🦾</div>
+                <div class="skill__meta">
+                  <strong>Pick &amp; Place</strong>
+                  <span>vision-guided grasping · 4.9★</span>
+                </div>
+                <button class="skill__install">Install</button>
+              </div>
+              <div class="skill">
+                <div class="skill__icon">📦</div>
+                <div class="skill__meta">
+                  <strong>Warehouse Navigation</strong>
+                  <span>SLAM + fleet routing · 4.8★</span>
+                </div>
+                <button class="skill__install">Install</button>
+              </div>
+              <div class="skill">
+                <div class="skill__icon">🔍</div>
+                <div class="skill__meta">
+                  <strong>Defect Inspection</strong>
+                  <span>anomaly detection · 4.9★</span>
+                </div>
+                <button class="skill__install skill__install--done">Installed</button>
+              </div>
+              <div class="skill skill--agent">
+                <div class="skill__icon">🧠</div>
+                <div class="skill__meta">
+                  <strong>Warehouse Supervisor Agent</strong>
+                  <span>assigns tasks · routes robots · reports KPIs</span>
+                </div>
+                <span class="tag">AI Agent</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logo / hardware strip -->
+      <div class="container">
+        <div class="strip">
+          <span class="strip__label">Built to run across every major platform</span>
+          <div class="strip__logos">
+            <span>ABB</span><span>FANUC</span><span>Universal Robots</span>
+            <span>Dobot</span><span>Unitree</span><span>Agility</span><span>Humanoids</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Problem ===== -->
+    <section class="section" id="problem">
+      <div class="container">
+        <div class="section__head">
+          <span class="kicker">The problem</span>
+          <h2>Robotics is stuck where software was before the app store.</h2>
+          <p class="section__sub">
+            Before Apple's App Store, every program was installed by hand and rebuilt for each device.
+            Robotics lives there today — capabilities are locked to hardware, and nothing is reusable.
+          </p>
+        </div>
+
+        <div class="split">
+          <div class="split__card split__card--bad">
+            <span class="split__tag">Today</span>
+            <h3>Rebuild everything, every time</h3>
+            <ul class="ticks ticks--x">
+              <li>Custom code for navigation, grasping, vision, safety — per robot</li>
+              <li>Skills locked to one vendor's hardware</li>
+              <li>Expensive on-board GPUs on every unit</li>
+              <li>Weeks of engineering to add one capability</li>
+              <li>Zero shared learning across a fleet</li>
+            </ul>
+          </div>
+          <div class="split__card split__card--good">
+            <span class="split__tag">With RoboBricks</span>
+            <h3>Install capability like software</h3>
+            <ul class="ticks">
+              <li>Download a proven skill from the marketplace</li>
+              <li>Runs on any robot via hardware adapters</li>
+              <li>Heavy AI runs in the cloud — cheap edge devices</li>
+              <li>New capability live in minutes</li>
+              <li>Every robot's data improves the whole fleet</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Platform pillars ===== -->
+    <section class="section section--alt" id="platform">
+      <div class="container">
+        <div class="section__head">
+          <span class="kicker">The platform</span>
+          <h2>GitHub&nbsp;+&nbsp;Docker&nbsp;+&nbsp;AWS — for robots.</h2>
+          <p class="section__sub">
+            A single cloud layer that sits between applications and hardware. Developers publish bricks,
+            companies subscribe, and every robot connects to the same brain.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card__icon">🧱</div>
+            <h3>Skill Marketplace</h3>
+            <p>Publish robot capabilities as downloadable packages — pick &amp; place, shelf scanning, welding, patrol. A factory installs new skills in minutes, not weeks.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">🤖</div>
+            <h3>AI Agents as Employees</h3>
+            <p>Don't just download software — download workers. A Warehouse Supervisor agent assigns tasks, routes robots, detects delays and reports KPIs. Each agent owns one job.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">☁️</div>
+            <h3>Cloud Brain</h3>
+            <p>Lightweight compute on the robot, heavy AI in the cloud. Subscribe to vision, planning and reasoning instead of buying a GPU for every unit.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">🔌</div>
+            <h3>Hardware Independence</h3>
+            <p>One skill, many robots. Adapters translate high-level commands into vendor-specific instructions for ABB, Fanuc, UR, Unitree, Agility and humanoids.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">📈</div>
+            <h3>Continuous Learning</h3>
+            <p>Every robot uploads operational data. When one robot learns a better grasp, an improved model deploys to every connected robot. A fleet that compounds.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">🧪</div>
+            <h3>Digital Twin</h3>
+            <p>Simulate, safety-validate and performance-test every new skill before it touches real hardware. Less downtime, fewer costly mistakes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Developers / API ===== -->
+    <section class="section" id="developers">
+      <div class="container dev">
+        <div class="dev__copy">
+          <span class="kicker">For developers</span>
+          <h2>High-level APIs. No low-level robot code.</h2>
+          <p class="section__sub">
+            Write intent, not motor commands. The platform compiles your calls into
+            hardware-specific instructions and validates them in simulation first.
+          </p>
+          <ul class="ticks">
+            <li>Language-native SDKs and a REST/gRPC API</li>
+            <li>Publish, version and monetise your own bricks</li>
+            <li>Usage-based pricing — pay for what runs</li>
+            <li>Test against a digital twin before deploy</li>
+          </ul>
+        </div>
+
+        <div class="code">
+          <div class="code__bar">
+            <span class="panel__dots"><i></i><i></i><i></i></span>
+            <span class="code__file">robot_task.py</span>
+          </div>
+<pre class="code__body"><code><span class="c-com"># Same code — any supported robot</span>
+robot = robobricks.<span class="c-fn">connect</span>(<span class="c-str">"warehouse-a/unit-14"</span>)
+
+robot.<span class="c-fn">navigate</span>(<span class="c-str">"Warehouse A"</span>)
+robot.<span class="c-fn">pick</span>(<span class="c-str">"red_box"</span>)
+robot.<span class="c-fn">inspect</span>(<span class="c-str">"motor"</span>)
+
+<span class="c-com"># Ask the cloud brain to reason</span>
+pallet = robot.<span class="c-fn">ask</span>(<span class="c-str">"Find an empty pallet"</span>)
+robot.<span class="c-fn">learn</span>(task)   <span class="c-com"># fleet improves</span>
+</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Marketplace ===== -->
+    <section class="section section--alt" id="marketplace">
+      <div class="container">
+        <div class="section__head">
+          <span class="kicker">The marketplace</span>
+          <h2>Where the network effects begin.</h2>
+          <p class="section__sub">
+            Developers publish. Customers subscribe. Manufacturers integrate. Every new brick makes the
+            platform more valuable to everyone on it.
+          </p>
+        </div>
+
+        <div class="market">
+          <div class="market__cat"><h4>Logistics</h4><p>Picking · Sorting · Loading</p></div>
+          <div class="market__cat"><h4>Manufacturing</h4><p>Welding · Assembly · Inspection</p></div>
+          <div class="market__cat"><h4>Agriculture</h4><p>Spraying · Harvesting</p></div>
+          <div class="market__cat"><h4>Healthcare</h4><p>Medicine delivery</p></div>
+          <div class="market__cat"><h4>Hospitality</h4><p>Reception · Cleaning</p></div>
+          <div class="market__cat"><h4>Retail</h4><p>Shelf scanning</p></div>
+          <div class="market__cat"><h4>Security</h4><p>Patrol · Intrusion detection</p></div>
+          <div class="market__cat market__cat--more"><h4>+ Your brick</h4><p>Publish &amp; earn</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Enterprise ===== -->
+    <section class="section" id="enterprise">
+      <div class="container">
+        <div class="section__head">
+          <span class="kicker">Enterprise-grade</span>
+          <h2>Everything a fleet operator expects — as a service.</h2>
+        </div>
+        <div class="chips">
+          <span>Fleet management</span>
+          <span>Remote monitoring</span>
+          <span>OTA updates</span>
+          <span>Roles &amp; access control</span>
+          <span>Audit logs</span>
+          <span>Robot health monitoring</span>
+          <span>Predictive maintenance</span>
+          <span>Usage analytics</span>
+          <span>Billing &amp; licensing</span>
+          <span>Security policies</span>
+          <span>Compliance controls</span>
+          <span>SLAs &amp; premium support</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Business model ===== -->
+    <section class="section section--alt" id="business">
+      <div class="container">
+        <div class="section__head">
+          <span class="kicker">Business model</span>
+          <h2>Recurring software revenue on top of one-time hardware.</h2>
+          <p class="section__sub">
+            The robot is sold once. The platform earns every month. Software margins compound where
+            hardware margins can't.
+          </p>
+        </div>
+
+        <div class="revenue">
+          <div class="rev"><span class="rev__k">SaaS</span><h4>Fleet subscriptions</h4><p>Per-robot monthly management &amp; monitoring.</p></div>
+          <div class="rev"><span class="rev__k">Marketplace</span><h4>Skills &amp; agents</h4><p>Paid bricks with a commission on every sale.</p></div>
+          <div class="rev"><span class="rev__k">Usage</span><h4>API &amp; inference</h4><p>Metered cloud-brain compute and API calls.</p></div>
+          <div class="rev"><span class="rev__k">Enterprise</span><h4>Licensing &amp; SLAs</h4><p>Private deployments, support, digital-twin services.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA / Contact ===== -->
+    <section class="cta" id="contact">
+      <div class="container cta__inner">
+        <h2>Let's build the layer every robot runs on.</h2>
+        <p>We're raising and onboarding design-partner fleets. If you're an investor, a robotics
+          manufacturer, or a developer who wants to ship bricks — we'd love to talk.</p>
+
+        <form class="cta__form" id="accessForm" novalidate>
+          <div class="cta__row">
+            <input type="text" name="name" placeholder="Your name" aria-label="Your name" required />
+            <input type="email" name="email" placeholder="Work email" aria-label="Work email" required />
+          </div>
+          <select name="role" aria-label="I am a…" required>
+            <option value="" disabled selected>I am a…</option>
+            <option>Investor</option>
+            <option>Robotics manufacturer</option>
+            <option>Fleet operator / enterprise</option>
+            <option>Developer</option>
+            <option>Other</option>
+          </select>
+          <button type="submit" class="btn btn--primary btn--lg">Request early access</button>
+          <p class="cta__note" id="formNote" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#top" class="brand">
+          <svg class="brand__mark" viewBox="0 0 32 32" width="26" height="26" aria-hidden="true">
+            <path d="M8 12l8-4 8 4-8 4-8-4z" fill="#38bdf8"/>
+            <path d="M8 12v8l8 4v-8l-8-4z" fill="#0ea5e9"/>
+            <path d="M24 12v8l-8 4v-8l8-4z" fill="#fb923c"/>
+          </svg>
+          <span class="brand__name">Robo<span>Bricks</span></span>
+        </a>
+        <p>The cloud platform where robot capabilities become software.</p>
+      </div>
+      <div class="footer__cols">
+        <div>
+          <h5>Platform</h5>
+          <a href="#platform">Overview</a>
+          <a href="#marketplace">Marketplace</a>
+          <a href="#enterprise">Enterprise</a>
+        </div>
+        <div>
+          <h5>Company</h5>
+          <a href="#business">Business model</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div>
+          <h5>Developers</h5>
+          <a href="#developers">API &amp; SDK</a>
+          <a href="#developers">Publish a brick</a>
+          <a href="#developers">Docs</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bar">
+      <span>© <span id="year"></span> RoboBricks. All rights reserved.</span>
+      <span>Made in India · Built for every robot.</span>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
